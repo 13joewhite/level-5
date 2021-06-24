@@ -10,7 +10,7 @@ const movies = [
     { title: "lion king", genre: "fantasy", _id: v4() },
     { title: "friday the 13th", genre: "horror",  _id: v4()}
 ]
-
+r
 // Get All
 movieRouter.get("/", (req, res) => {
     res.send(movies)
