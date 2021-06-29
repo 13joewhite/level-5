@@ -48,6 +48,7 @@ function App(){
             <AddBountyForm 
             submit={addBounty}
             btnText ="Add Bounty"
+            editBounty={editBounty} 
             />
         <div className="bountyContainer">
             { bounties.map(bounty =>  

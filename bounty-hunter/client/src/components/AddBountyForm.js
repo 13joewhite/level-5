@@ -18,7 +18,7 @@ function AddBountyForm(props){
     }
 
     return(
-        <form onSubmit={(e) => {
+        <form className={props.setEditToggle !== undefined ? "edit-form" : null} onSubmit={(e) => {
             handleSubmit(e)
             if(props.setEditToggle !== undefined) {
                 return props.setEditToggle(prevToggle => !prevToggle)

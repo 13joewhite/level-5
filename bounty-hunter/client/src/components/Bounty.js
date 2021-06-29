@@ -23,9 +23,9 @@ export default function Bounty(props){
                 className="btn btn-animated btn-yellow">
                 Edit 
             </button>
-            </>
-            :
-            <div className="editForm">
+        </>
+        :
+        <div>
             <AddBountyForm 
                 firstName={props.firstName} 
                 lastName={props.lastName}
@@ -42,7 +42,7 @@ export default function Bounty(props){
                 className="btn btn-animated btn-yellow">
                 Close
             </button>
-            </div>
+        </div>
             }
         </div>
     )

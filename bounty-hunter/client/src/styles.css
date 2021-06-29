@@ -3,18 +3,18 @@ body, html {
     background-image: url("https://i.pinimg.com/originals/c0/27/f0/c027f0635e954b7fa6682fa0d5abc395.jpg");
 }
 
+.edit-form{
+    display: flex;
+    flex-direction: column;
+}
+
 form {
     display: flex;
     justify-content: space-around;
     border: 1px solid #ffe81f;
+    border-radius: 25px;
     padding: 10px;
     margin: 5px;
-}
-
-.editForm {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 input, select{
@@ -25,57 +25,18 @@ input, select{
     margin: 5px;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-yellow {
-    background-color: #ffe81f;
-    color: #0000009a;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn-yellow::after {
-    background-color: #ffe91f96;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn-animated {
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-large;
-    color: #ffe81f;
-    text-shadow: 3px 3px #a19a9a;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
+  button{
+    background-color: #54ad7a;
+    color: black;
+    font-style: italic;
+    border-top: 2px solid #ffe81f;
+    border-bottom: 2px solid #ffe81f;
+    transition: all .25s;
+  }
+  
+  button:hover{
+    letter-spacing: 5px;
+  }
 
 .bountyContainer {
 	display: flex; 
@@ -91,6 +52,15 @@ input, select{
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin-top: 30px;
+    border-radius: 25px;
+    border: 1px solid #ffe81f;
     color: #54ad7a;
     background-color: #2e4558c5;
+    box-shadow: 
+    #ffe91fb0 5px 5px, 
+    #ffe91f8c 10px 10px, 
+    #ffe91f50 15px 15px, 
+    #ffe91f1e 20px 20px, 
+    #ffe91f09 25px 25px;
 }
