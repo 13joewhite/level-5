@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    background-image: url("https://i.pinimg.com/originals/c0/27/f0/c027f0635e954b7fa6682fa0d5abc395.jpg");
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ffe81f;
+    padding: 10px;
+    margin: 5px;
+}
+
+.editForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input, select{
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid #ffe81f;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yellow {
+    background-color: #ffe81f;
+    color: #0000009a;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-yellow::after {
+    background-color: #ffe91f96;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: #ffe81f;
+    text-shadow: 3px 3px #a19a9a;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.bountyContainer {
+	display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bounty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #54ad7a;
+    background-color: #2e4558c5;
+}

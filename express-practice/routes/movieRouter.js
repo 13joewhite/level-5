@@ -1,16 +1,14 @@
 const express = require("express")
 const movieRouter = express.Router()
-const { uuid } = require("uuidv4")
-const { v4 } = require("uuid")
 
 //fake data 
 const movies = [ 
-    { title: "die hard", genre: "action", _id: v4() },
-    { title: "star wars IV", genre: "fantasy", _id: v4() },
-    { title: "lion king", genre: "fantasy", _id: v4() },
-    { title: "friday the 13th", genre: "horror",  _id: v4()}
+    { title: "die hard", genre: "action"},
+    { title: "star wars IV", genre: "fantasy"},
+    { title: "lion king", genre: "fantasy"},
+    { title: "friday the 13th", genre: "horror"}
 ]
-r
+
 // Get All
 movieRouter.get("/", (req, res) => {
     res.send(movies)
@@ -33,7 +31,6 @@ movieRouter.get("/search/genre", (req, res) => {
 
 // Post One
 movieRouter.post("/", (req, res) => {
-    req.body._id = v4()
     movies.push(req.body)
     res.send(`Added ${req.body.title}`)
 })
@@ -54,19 +51,4 @@ movieRouter.put("/:movieId", (req, res) => {
     res.send(updatedMovie) 
 })
 
-
-// Routes
-// movieRouter.route("/")
-//     .get((request, response) => {
-//         response.send(movies)
-//     })
-//     .post((req, res) => {
-//         req.body._id = v4()
-//         movies.push(req.body)
-//         res.send(`Added ${req.body.title}`)
-//     })  
-
-
-
-
-module.exports = movieRouter
+module.exports = movieRouter 

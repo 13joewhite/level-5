@@ -1,10 +1,11 @@
 const express = require("express")
 const app = express()
 
-app.get("/items", (req, res, next) => {
+const interecptFunc = app.use("/items", (req, res, next) => {
+    console.log(" Get request was interecpted!! ")
     req.body = { playerName: "rick", playerNumber: 22 }
     next()
 })
 
 
-module.exports = app
+module.exports = interecptFunc
