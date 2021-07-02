@@ -5,7 +5,7 @@ const Bounty = require("../models/bounties")
 //get all
 bountiesRouter.get("/", (req, res, next) => { 
     Bounty.find((err, bounties) => {
-        if(err) {
+        if(err) { 
             res.status(500)
             return next(err)
         }
@@ -46,7 +46,7 @@ bountiesRouter.delete("/:bountyId", (req, res) => {
 //update one
 bountiesRouter.put("/:bountyId", (req, res, next) => {
     Bounty.findOneAndUpdate(
-        { _id: req.params.bountyId }, //find this one to updats=e
+        { _id: req.params.bountyId }, //find this one to update
         req.body, // update the object with this data
         { new: true }, // send back the updated version
         (err, updatedBounty) => {

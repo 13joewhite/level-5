@@ -4,7 +4,7 @@ const morgan = require("morgan")
 const mongoose = require("mongoose")
 
 app.use(express.json())
-app.use(morgan('dev'))
+app.use(morgan('dev'))  
 
 //connect to db
 mongoose.connect("mongodb://localhost:27017/bounty-hunter-db", 
