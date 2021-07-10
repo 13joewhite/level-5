@@ -4,7 +4,7 @@ function AddBountyForm(props){
     const bountyInput = { firstName: props.firstName || "", lastName: props.lastName || "", status: props.status || "", bounty: props.bounty || "", type: props.type ||""}
     const [inputs, setInputs] = useState(bountyInput)
 
-    function handleChange(e){
+    function handleChange(e){ 
         const {name, value} = e.target
         setInputs(prevInput => ({...prevInput, [name]: value}))
     }

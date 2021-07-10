@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import AddBountyForm from "./AddBountyForm"
 
 
-export default function Bounty(props){
+export default function Bounty(props){ 
     const [editToggle, setEditToggle] = useState(false)
     console.log(props.bounties)
     return (
