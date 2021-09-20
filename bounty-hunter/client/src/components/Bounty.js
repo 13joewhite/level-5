@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import AddBountyForm from "./AddBountyForm"
 
 
-export default function Bounty(props){
+export default function Bounty(props){ 
     const [editToggle, setEditToggle] = useState(false)
     console.log(props.bounties)
     return (
@@ -30,7 +30,7 @@ export default function Bounty(props){
                 firstName={props.firstName} 
                 lastName={props.lastName}
                 bounty={props.bounty}
-                status={props.status} 
+                status={props.status}  
                 type={props.type}  
                 _id={props._id}
                 btnText="Submit Edit"  

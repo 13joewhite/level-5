@@ -4,7 +4,7 @@ function AddBountyForm(props){
     const bountyInput = { firstName: props.firstName || "", lastName: props.lastName || "", status: props.status || "", bounty: props.bounty || "", type: props.type ||""}
     const [inputs, setInputs] = useState(bountyInput)
 
-    function handleChange(e){
+    function handleChange(e){ 
         const {name, value} = e.target
         setInputs(prevInput => ({...prevInput, [name]: value}))
     }
@@ -55,7 +55,7 @@ function AddBountyForm(props){
                 placeholder="Bounty Amount"
             />
              <select 
-                name="type"  
+                name="type"   
                 value={inputs.type} 
                 onChange={handleChange}>
                 <option value="" disabled hidden>Jedi/Sith</option>
