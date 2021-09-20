@@ -16,18 +16,18 @@ function App(){
         
         function addBounty(newBounty){
             axios.post("/bounties", newBounty)
-            .then(res => {
-                setBounties(prevBounties => [...prevBounties, res.data])
-            })
-            .catch(err => console.log(err))
-        }
+                .then(res => {
+                    setBounties(prevBounties => [...prevBounties, res.data])
+                })
+                .catch(err => console.log(err))
+        } 
         
         function deleteBounty(bountyId) { 
             axios.delete(`/bounties/${bountyId}`)
-            .then(res => {
-                setBounties(prevBounties => prevBounties.filter(bounty => bounty._id !== bountyId))
-            })
-            .catch(err => console.log(err))
+                .then(res => {
+                    setBounties(prevBounties => prevBounties.filter(bounty => bounty._id !== bountyId))
+                })
+                .catch(err => console.log(err))
         }
         
         function editBounty(updates, bountyId) {
@@ -44,7 +44,9 @@ function App(){
         
         return (
         <div>
-            <h1 className="header">My Bounties</h1>
+            <div className="header-box">
+                <h1 className="header">My Bounties</h1>
+            </div>
             <AddBountyForm 
             submit={addBounty}
             btnText ="Add Bounty"

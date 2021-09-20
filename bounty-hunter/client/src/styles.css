@@ -3,6 +3,16 @@ body, html {
     background-image: url("https://i.pinimg.com/originals/c0/27/f0/c027f0635e954b7fa6682fa0d5abc395.jpg");
 }
 
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  color: #ffe81f;
+}
+
 .edit-form{
     display: flex;
     flex-direction: column;

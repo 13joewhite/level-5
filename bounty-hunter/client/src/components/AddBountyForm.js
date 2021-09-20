@@ -55,7 +55,7 @@ function AddBountyForm(props){
                 placeholder="Bounty Amount"
             />
              <select 
-                name="type"  
+                name="type"   
                 value={inputs.type} 
                 onChange={handleChange}>
                 <option value="" disabled hidden>Jedi/Sith</option>

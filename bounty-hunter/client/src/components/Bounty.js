@@ -30,7 +30,7 @@ export default function Bounty(props){
                 firstName={props.firstName} 
                 lastName={props.lastName}
                 bounty={props.bounty}
-                status={props.status} 
+                status={props.status}  
                 type={props.type}  
                 _id={props._id}
                 btnText="Submit Edit"  
